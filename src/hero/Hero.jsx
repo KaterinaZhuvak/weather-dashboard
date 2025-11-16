@@ -13,7 +13,8 @@ const Hero = () => {
           <div className={styles.input_wrapper}>
               <input className={styles.input} type="text" placeholder="Search location..." />
               <button className={styles.input_btn}>
-                    <img src={searchImg} alt="search" />
+                    <img src={searchImg} alt="search" /> 
+                    {/* comment  */}
               </button>
           </div>
         </div> 
