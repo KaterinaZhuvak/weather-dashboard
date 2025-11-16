@@ -1,3 +1,7 @@
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "Montserrat Alternates", sans-serif;
+}
 .App {
   text-align: center;
 }

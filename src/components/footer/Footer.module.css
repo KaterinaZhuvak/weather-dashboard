@@ -1,0 +1,36 @@
+.footer{
+    padding: 35px, auto;
+    background-color: #FFB36C;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.textTitle{
+font-family: var(--second-family);
+font-weight: 500;
+font-size: 16px;
+color: #000;
+} 
+.list{
+    display: flex;
+    gap: 10px;  
+    list-style-type: none;
+}
+.text{
+    text-align: left;
+    font-family: var(--second-family);
+font-weight: 500;
+font-size: 12px;
+color: #000;
+}
+.contact_title{
+    font-family: var(--second-family);
+font-weight: 500;
+font-size: 16px;
+color: #000;
+}
