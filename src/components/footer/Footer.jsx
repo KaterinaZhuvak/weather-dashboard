@@ -23,7 +23,7 @@ const Footer = () => {
                     <li className="footer__contact-item">
                         <img className="footer__contact-img" src={facebookImg} alt="facebook" />
                     </li>
-                   <li className="footer__contact-item">
+                    <li className="footer__contact-item">
                         <img className="footer__contact-img" src={whatsappImg} alt="whatsapp" />
                     </li>
                 </ul>
