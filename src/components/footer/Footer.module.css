@@ -3,12 +3,13 @@
     background-color: #FFB36C;
 }
 .container{
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 50px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: center; */
     align-items: center;
+    gap: 103px;
 }
 .textTitle{
 font-family: var(--second-family);

@@ -1,0 +1,95 @@
+.card{
+border-radius: 20px;
+width: 320px;
+
+background: #e8e8e8;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.location_info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-top: 20px; */
+    margin: 30px;
+    position: relative;
+    top: -39px;
+    width: 260px;
+
+}
+.city_name , .country_name{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+}
+.current_time{
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 24px;
+color: #000;    
+position: relative;
+top: -100px;
+}
+.line{
+    border: 1px solid #000;
+width: 17px;
+height: 0px;
+transform: rotate(-90deg);
+}
+.date{
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 14px;
+text-align: right;
+color: #000;
+margin-right: 13px;
+
+}
+.wrapper button{
+    position: relative;
+    top: -110px;
+}
+.day{
+    margin-left: 13px;
+}
+.date_info{
+    position: relative;
+    top: -80px;
+}
+.current_temp{
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 26px;
+text-align: center;
+color: #000;
+position:relative;
+top: -40px;
+}
+.weather_img{
+    width: 76px;
+    height: 76px;
+    position: relative;
+    top: -55px;
+}
+.weather_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.user_functionality{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    top: -20px;
+}
+.refresh, .delete , .like{
+    border: none;
+    background: none;
+}

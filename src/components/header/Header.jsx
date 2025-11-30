@@ -2,14 +2,9 @@ import styles from './Header.module.css';
 import logoImg from '../../images/logo.png';
 import userImg from '../../images/user.png';
 import Button from '../button/Button';
-import { useState } from "react";
+// import { useState } from "react";
 
-const Header = () => {
-const [open, setOpen] = useState(false);
-
-
-const openModal = () => setOpen(true);
-const closeModal = () => setOpen(false);
+const Header = ({ openModal }) => {
     return(
         <header className={styles.header}>
         <div className={styles.container}>
@@ -24,8 +19,8 @@ const closeModal = () => setOpen(false);
             </ul>
         </div>
             <div className={styles.user}>
-                <Button text="Sign Up" onClick={openModal}/>
-                <div className={styles.img}>
+                <Button text="Sign Up" onClick={openModal} />
+                <div className={styles.user_img}>
                     <img src={userImg} alt="user" />
                 </div>
             </div>
