@@ -1,11 +1,11 @@
 import Header from './components/header/Header';
-import Hero from './hero/Hero';
-import Footer from './components/footer/Footer';
-import Modal from './components/modal/Modal';
+// import Hero from './hero/Hero';
+// import Footer from './components/footer/Footer';
+// import Modal from './components/modal/Modal';
 import {useState} from 'react';
-import News from './components/news/News';
-import Card from './components/card/Card';
-import Pictures from './components/pictures/PIctures';
+// import News from './components/news/News';
+// import Card from './components/card/Card';
+// import Pictures from './components/pictures/PIctures';
 import './App.css';
 
 
@@ -31,14 +31,14 @@ function App() {
   return (
     <div className="App">
       <Header openModal={openModal} />
-      {setIsModalOpen && (
+      {/* {setIsModalOpen && (
       <Modal closeModal={closeModal}  />
       )}
       <Hero/>
       <Card/>
       <News/>
       <Pictures/>
-      <Footer/>
+      <Footer/> */}
     </div>
   );
 }

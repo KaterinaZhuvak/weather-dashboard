@@ -2,31 +2,52 @@ import styles from './Header.module.css';
 import logoImg from '../../images/logo.png';
 import userImg from '../../images/user.png';
 import Button from '../button/Button';
-// import { useState } from "react";
+import { useState } from "react";
 
 const Header = ({ openModal }) => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return(
         <header className={styles.header}>
-        <div className={styles.container}>
-        <div className={styles.wrapper}>
-                    <div className={styles.logo}>
-                <img  src={logoImg} alt="Logo" />
-            </div>
-            <ul className={styles.list}>
-                <li className={styles.item}>Who we are</li>
-                <li className={styles.item}>Contacts</li>
-                <li className={styles.item}>Menu</li>
-            </ul>
-        </div>
-            <div className={styles.user}>
-                <Button text="Sign Up" onClick={openModal} />
-                <div className={styles.user_img}>
-                    <img src={userImg} alt="user" />
+            <div className={styles.container}>
+                
+                <div className={styles.logo}>
+                    <img src={logoImg} alt="Logo" />
                 </div>
-            </div>
 
-        </div>
+                {/* Кнопка для мобилок */}
+                <button 
+                    className={styles.menuToggle}
+                    onClick={() => setMenuOpen(prev => !prev)}
+                >
+                    ☰
+                </button>
+
+                {/* Меню */}
+                <div className={`${styles.wrapper} ${menuOpen ? styles.open : ""}`}>
+                    <ul className={styles.list}>
+                        <li className={styles.item}>Who we are</li>
+                        <li className={styles.item}>Contacts</li>
+                        <li className={styles.item}>Menu</li>
+                    </ul>
+                    <div className={styles.user}>
+                    <Button text="Sign Up" onClick={openModal} />
+                    <div className={styles.user_img}>
+                        <img src={userImg} alt="user" />
+                    </div>
+                </div>
+                </div>
+
+                {/* <div className={styles.user}>
+                    <Button text="Sign Up" onClick={openModal} />
+                    <div className={styles.user_img}>
+                        <img src={userImg} alt="user" />
+                    </div>
+                </div> */}
+
+            </div>
         </header>
-    )
-}
+    );
+};
+
 export default Header;
