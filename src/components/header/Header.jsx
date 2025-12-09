@@ -1,10 +1,11 @@
 import styles from './Header.module.css';
 import logoImg from '../../images/logo.png';
 import userImg from '../../images/user.png';
+import arrow from '../../images/arrow.svg';
 import Button from '../button/Button';
 import { useState } from "react";
 
-const Header = ({ openModal }) => {
+const Header = ({ openModal, user, onSignOut }) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return(
@@ -15,36 +16,38 @@ const Header = ({ openModal }) => {
                     <img src={logoImg} alt="Logo" />
                 </div>
 
-                {/* Кнопка для мобилок */}
                 <button 
-                    className={styles.menuToggle}
-                    onClick={() => setMenuOpen(prev => !prev)}
+                  className={`${styles.menuToggle} ${menuOpen ? styles.rotated : ""}`}
+                  onClick={() => setMenuOpen(prev => !prev)}
                 >
-                    ☰
+                    <img src={arrow} alt="arrow" />
                 </button>
 
-                {/* Меню */}
                 <div className={`${styles.wrapper} ${menuOpen ? styles.open : ""}`}>
                     <ul className={styles.list}>
                         <li className={styles.item}>Who we are</li>
                         <li className={styles.item}>Contacts</li>
                         <li className={styles.item}>Menu</li>
                     </ul>
+
                     <div className={styles.user}>
-                    <Button text="Sign Up" onClick={openModal} />
-                    <div className={styles.user_img}>
-                        <img src={userImg} alt="user" />
+                        {user ? (
+                            <>
+                                <span className={styles.username}>{user.username}</span>
+                                <Button text="Sign Out" onClick={onSignOut} />
+                                <div className={styles.user_img}>
+                                    <img src={userImg} alt="user" />
+                                </div>
+                            </>
+                        ) : (  <>
+                                <Button text="Sign Up" onClick={openModal} />
+                                <div className={styles.user_img}>
+                                    <img src={userImg} alt="user" />
+                                </div> 
+                                </>
+                        )}
                     </div>
                 </div>
-                </div>
-
-                {/* <div className={styles.user}>
-                    <Button text="Sign Up" onClick={openModal} />
-                    <div className={styles.user_img}>
-                        <img src={userImg} alt="user" />
-                    </div>
-                </div> */}
-
             </div>
         </header>
     );

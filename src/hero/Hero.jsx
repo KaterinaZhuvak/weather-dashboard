@@ -1,6 +1,16 @@
 import styles from "./Hero.module.css";
 import searchImg from "../images/search.svg";
-const Hero = () => {
+import { useState } from "react";
+
+const Hero = ({ onSearch }) => {
+const [value, setValue] = useState("");
+
+    const handleClick = () => {
+        if (value.trim()) {
+            onSearch(value);
+            setValue("");
+        }
+    };
     const date = new Date();
     const day = date.getDate();
     const month = date.toLocaleString("en-GB", { month: "long" });
@@ -16,10 +26,10 @@ const Hero = () => {
                 <h2 className={styles.date}>{month} {year} <br /> {dayOfWeek}, {day}</h2>  
             </div>
             <div className={styles.input_wrapper}>
-                <input className={styles.input} type="text" placeholder="Search location..." />
-                <button className={styles.input_btn}>
+                <input className={styles.input} type="text" placeholder="Search location..."  value={value}
+                    onChange={(e) => setValue(e.target.value)}/>
+                <button className={styles.input_btn} onClick={handleClick}>
                     <img src={searchImg} alt="search" /> 
-                    {/* comment  */}
                 </button>
             </div>
         </div> 

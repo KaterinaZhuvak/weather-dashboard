@@ -6,7 +6,7 @@ background: #ffb36c;
 border: none;
 display: flex;
 flex-direction: row;
-justify-content: center;
+
 align-items: center;
 font-family: var(--second-family);
 font-weight: 500;

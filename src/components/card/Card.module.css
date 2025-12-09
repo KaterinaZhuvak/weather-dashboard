@@ -1,12 +1,17 @@
-.card{
+.card_container{
 border-radius: 20px;
 width: 320px;
-
 background: #e8e8e8;
 display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
 }
 .location_info{
     display: flex;
@@ -47,7 +52,6 @@ font-size: 14px;
 text-align: right;
 color: #000;
 margin-right: 13px;
-
 }
 .wrapper button{
     position: relative;
@@ -61,17 +65,17 @@ margin-right: 13px;
     top: -80px;
 }
 .current_temp{
-font-family: var(--font-family);
-font-weight: 500;
-font-size: 26px;
-text-align: center;
-color: #000;
-position:relative;
-top: -40px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 26px;
+    text-align: center;
+    color: #000;
+    position:relative;
+    top: -40px;
 }
 .weather_img{
-    width: 76px;
-    height: 76px;
+    width: 120px;
+    height: 120px;
     position: relative;
     top: -55px;
 }
@@ -87,9 +91,23 @@ top: -40px;
     align-items: center;
     gap: 20px;
     position: relative;
-    top: -20px;
+    top: -40px;
 }
 .refresh, .delete , .like{
     border: none;
     background: none;
 }
+/* .like img {
+    filter: grayscale(1);
+    transition: 0.3s;
+} */
+
+.liked img {
+    /* filter: none; */
+    opacity: 1;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: 0.3s;
+    fill: red;
+}
+
