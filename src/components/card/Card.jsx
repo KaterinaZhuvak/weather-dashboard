@@ -5,7 +5,8 @@
     import bin from '../../images/bin.svg';
     import styles from './Card.module.css';
     import { useEffect, useState, useCallback } from 'react';
-    import WeatherDetailsModal from "../card-details/WeatherDetailsModal";
+    import HourlyModal from '../hourly-weather/HourlyModal';
+    import WeatherDetailsModal from '../card-details/WeatherDetailsModal';
 
     const API_KEY = "428cd4749b442fe8cc7d21d894cabf94"; 
 
@@ -18,6 +19,7 @@
             const interval = setInterval(() => { setTime(new Date()); }, 1000); 
             return () => clearInterval(interval);}, []); 
         const formattedTime = time.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", });
+        const [showHourly, setShowHourly] = useState(false);
         const [weather, setWeather] = useState(null);
         const [liked, setLiked] = useState(saved || false);
         const [showDetails, setShowDetails] = useState(false);
@@ -68,7 +70,8 @@
             </div> 
         <div className={styles.wrapper}> 
             <h3 className={styles.current_time}>{formattedTime}</h3> 
-            <Button text="Hourly Forecast"/> </div> 
+           <Button text="Hourly Forecast" onClick={() => setShowHourly(true)} />
+                </div> 
             <div className={styles.date_info}> 
                 <span className={styles.date}>{day}.{month}.{year}</span> 
                 <span className={styles.line}></span> 
@@ -101,6 +104,13 @@
         onClose={() => setShowDetails(false)} 
     />
 )}
+{showHourly && (
+    <HourlyModal 
+        cityName={weather.name} 
+        onClose={() => setShowHourly(false)} 
+    />
+)}
+
 
         </>
 

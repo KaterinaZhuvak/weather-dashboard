@@ -25,7 +25,6 @@ const WeatherDetailsModal = ({ onClose, cityName }) => {
                 if (!response.ok) throw new Error("City not found");
 
                 const data = await response.json();
-
                 setWeather({
                     name: data.name,
                     country: data.sys.country,
@@ -75,21 +74,21 @@ const WeatherDetailsModal = ({ onClose, cityName }) => {
                 <div className={styles.info}>
                     <p className={styles.info_title}>Pressure</p>
                     <p className ={styles.info_data}>{weather.pressure} hPa</p>
-                      <div className={styles.info_img}>
+                    <div className={styles.info_img}>
                         <img src={pressure} alt="temp" />
                     </div>
                 </div>
                 <div className={styles.info}>
                     <p className={styles.info_title}>Wind</p>
                     <p className ={styles.info_data}> {weather.wind} m/s</p>
-                      <div className={styles.info_img}>
+                        <div className={styles.info_img}>
                         <img src={wind} alt="temp" />
                     </div>
                     </div>
                 <div className={styles.info}>
-                     <p className={styles.info_title}>Visibility</p>
-                     <p className ={styles.info_data}>{weather.visibility} m</p>
-                       <div className={styles.info_img}>
+                    <p className={styles.info_title}>Visibility</p>
+                    <p className ={styles.info_data}>{weather.visibility} m</p>
+                    <div className={styles.info_img}>
                         <img src={eye} alt="temp" />
                     </div>
                 </div>

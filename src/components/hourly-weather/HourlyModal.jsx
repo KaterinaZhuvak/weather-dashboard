@@ -1,0 +1,94 @@
+import { useEffect, useState } from "react";
+import { Line } from "react-chartjs-2";
+import {
+    Chart as ChartJS,
+    LineElement,
+    PointElement,
+    CategoryScale,
+    LinearScale,
+    Tooltip,
+    Filler,
+} from "chart.js";
+import styles from "./HourlyModal.module.css";
+
+ChartJS.register(
+    LineElement,
+    PointElement,
+    CategoryScale,
+    LinearScale,
+    Tooltip,
+    Filler
+);
+
+const API_KEY = "428cd4749b442fe8cc7d21d894cabf94";
+
+const HourlyForecastModal = ({ cityName, onClose }) => {
+    const [hours, setHours] = useState([]);
+    const [temps, setTemps] = useState([]);
+
+    useEffect(() => {
+        const fetchHourly = async () => {
+            const response = await fetch(
+                `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=${API_KEY}`
+            );
+
+            const data = await response.json();
+
+            const hourly = data.list.slice(0, 8); // 8 найближчих годин
+
+            setHours(hourly.map(item =>
+                new Date(item.dt * 1000).getHours() + ":00"
+            ));
+
+            setTemps(hourly.map(item => item.main.temp));
+        };
+
+        fetchHourly();
+    }, [cityName]);
+
+    const chartData = {
+        labels: hours,
+        datasets: [
+            {
+                label: "Temperature (°C)",
+                data: temps,
+                fill: false,
+                borderColor: "orange",
+                tension: 0.4,
+                pointRadius: 0,
+                borderWidth: 3,
+            },
+        ],
+    };
+
+    const chartOptions = {
+        responsive: true,
+        scales: {
+            y: {
+                ticks: { color: "#777" },
+                grid: { color: "#ddd" },
+            },
+            x: {
+                ticks: { color: "#777" },
+                grid: { display: false },
+            },
+        },
+        plugins: {
+            legend: { display: false },
+        },
+    };
+
+    return (
+        <div className={styles.backdrop} onClick={onClose}>
+            <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+                <h2 className={styles.title}>Hourly Forecast</h2>
+
+                <Line data={chartData} options={chartOptions} />
+
+                <button className={styles.close} onClick={onClose}>Close</button>
+            </div>
+        </div>
+    );
+};
+
+export default HourlyForecastModal;

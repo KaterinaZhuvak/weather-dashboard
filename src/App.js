@@ -60,7 +60,7 @@ function App() {
     localStorage.setItem("likedCities", JSON.stringify(updated));
   };
   const handleDelete = (cityName) => {
-  const updated = savedCards.filter(card => card.name !== cityName);
+    const updated = savedCards.filter(card => card.name !== cityName);
   setSavedCards(updated);
   localStorage.setItem("likedCities", JSON.stringify(updated));
 };
@@ -79,6 +79,7 @@ function App() {
     cityName={searchCity} 
     onLike={handleLike} 
     user={currentUser}
+    onDelete={handleDelete}
   />
 )}
 

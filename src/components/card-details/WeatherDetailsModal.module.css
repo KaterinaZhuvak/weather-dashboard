@@ -1,5 +1,11 @@
+.overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .modal{
-    width: 634px;
+    width: 634px;   
+    height: 590px ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,6 +14,7 @@
     border-radius: 15px;
     background: #e8e8e8;
     gap: 20px;
+    padding-bottom: 20px;
 }          
 .info{
     display: flex;
@@ -18,20 +25,19 @@
     width: 177px;
     height: 200px;
     background: #d9d9d9;
-
 }
 .info_title{
     font-family: var(--font-family);
-font-weight: 500;
-font-size: 12px;
-text-align: center;
-color: #000;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    color: #000;
 }
 .info_data{
     font-family: var(--font-family);
-font-weight: 500;
-font-size: 16px;
-text-align: center;
-color: #000;
-margin-bottom: 28px
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 28px
 }
