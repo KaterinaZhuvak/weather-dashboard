@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
+import Button from "../button/Button";
 import {
     Chart as ChartJS,
     LineElement,
@@ -65,7 +66,7 @@ const HourlyForecastModal = ({ cityName, onClose }) => {
         responsive: true,
         scales: {
             y: {
-                ticks: { color: "#777" },
+                ticks: { borderColor: "#b5b5b5", borderWidth: "1px"  },
                 grid: { color: "#ddd" },
             },
             x: {
@@ -83,9 +84,10 @@ const HourlyForecastModal = ({ cityName, onClose }) => {
             <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
                 <h2 className={styles.title}>Hourly Forecast</h2>
 
-                <Line data={chartData} options={chartOptions} />
-
-                <button className={styles.close} onClick={onClose}>Close</button>
+                <Line className={styles.info} data={chartData} options={chartOptions} />
+              <div className={styles.button}>
+                  <Button text="Close" onClick={onClose} />
+              </div>
             </div>
         </div>
     );

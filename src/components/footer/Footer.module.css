@@ -1,15 +1,27 @@
 .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     padding: 35px, auto;
     background-color: #FFB36C;
+    width: 100%;
+    @media (max-width: 393px) {
+        flex-direction: column;
+        /* padding: 20px; */
+    }
 }
 .container{
-    max-width: 1400px;
+    /* max-width: 1400px; */
     margin: 0 auto;
     padding: 50px;
     display: flex;
     /* justify-content: center; */
     align-items: center;
     gap: 103px;
+    @media (max-width: 393px) {
+        flex-wrap:wrap;  
+    }
 }
 .textTitle{
 font-family: var(--second-family);

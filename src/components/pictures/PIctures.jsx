@@ -24,7 +24,8 @@ const prev = () => {
 
 return (
     <div className={styles.pictures_section}> 
-    <div className={styles.container}>
+   <div className={styles.wrapper}>
+     <div className={styles.container}>
         <h4 className={styles.title}>Beautiful nature</h4>
 
     <div className={styles.slider_container}
@@ -32,8 +33,7 @@ return (
         {photos.length > 0 && (
         <img className={styles.slider_image}
             src={photos[index].largeImageURL}
-            alt="nature"
-          />
+            alt="nature"/>
         )}
 
         {/* Prev button */}
@@ -75,6 +75,7 @@ return (
         </button>
     </div>
     </div>
+   </div>
     </div>
 );
 }
