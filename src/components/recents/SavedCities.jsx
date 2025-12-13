@@ -10,13 +10,15 @@ const SavedCities = ({ saved, onDelete, user }) => {
 
             <div className={styles.grid}>
                 {saved.map((city, index) => (
-                    <Card
-                        key={index}
-                        cityName={city.name}
-                        saved
-                        user={user}
-                        onDelete={() => onDelete(city.name)}
-                    />
+               <Card
+                key={index}
+                cityName={city.name}
+                saved
+                user={user}
+                onLike={() => {}} // заглушка
+                onDelete={() => onDelete(city.name)}
+/>
+
                 ))}
             </div>
         </section>

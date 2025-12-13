@@ -17,8 +17,8 @@ useEffect(() => {
 }, []);
 
     return (
-        <div className={styles.news_section}>
-               <div className={styles.news_wrapper}>
+        <div className={styles.news_section} id="menu">
+            <div className={styles.news_wrapper}>
     <h2 className={styles.news_title}>Interacting with our pets</h2>
 
     <div className={styles.news_container}>

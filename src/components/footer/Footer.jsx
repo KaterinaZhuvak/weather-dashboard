@@ -5,7 +5,7 @@ import facebookImg from "../../images/facebook.svg"
 import whatsappImg from "../../images/whatsapp.svg"
 
 const Footer = () => {
-    return <footer className={styles.footer}>
+    return <footer className={styles.footer} id="contacts">
         <div className={styles.container}>
             <div className="footer__image">
                 <img className="footer__image-img" src={logoImg} alt="Logo" />
@@ -18,13 +18,15 @@ const Footer = () => {
                 <h5 className={styles.contact_title}>Contact Us</h5>
                 <ul className={styles.list}>
                     <li className="footer__contact-item">
-                        <img className="footer__contact-img" src={instagramImg} alt="instagram" />
+                       <a href="#"> <img className="footer__contact-img" src={instagramImg} alt="instagram" /></a>
                     </li>
                     <li className="footer__contact-item">
-                        <img className="footer__contact-img" src={facebookImg} alt="facebook" />
+                       <a href="#"> <img className="footer__contact-img" src={facebookImg} alt="facebook" /></a>
                     </li>
                     <li className="footer__contact-item">
-                        <img className="footer__contact-img" src={whatsappImg} alt="whatsapp" />
+                       <a href="#">
+                         <img className="footer__contact-img" src={whatsappImg} alt="whatsapp" />
+                       </a>
                     </li>
                 </ul>
             </div>

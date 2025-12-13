@@ -53,6 +53,14 @@ text-align: right;
 color: #000;
 margin-right: 13px;
 }
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  
+}
 .wrapper button{
     position: relative;
     top: -110px;

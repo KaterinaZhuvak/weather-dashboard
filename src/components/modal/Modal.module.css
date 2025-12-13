@@ -1,5 +1,5 @@
 .modal{
-    width: 600px;
+    /* width: 600px; */
     border: 1px solid #000000;
     display: flex;
     justify-content: space-between;
@@ -11,6 +11,12 @@
     top: 25%;
     left: 30%;
     z-index: 1000;
+    @media (max-width: 834px) {
+        left: 16%;
+    }
+      @media (max-width: 375px) {
+        left: 10%;
+    }
 }
 .modal_container{
     display: flex;
@@ -32,7 +38,17 @@ text-align: center;
     width: 440px;
     height: 50px;
     background: #e4e4e4;
-    margin-bottom:30px ;
+    /* margin-bottom:30px ; */
+    margin: 0 80px 30px 80px;
+    @media (max-width: 834px) {
+        /* width: 300px; */
+        margin: 0 45px 25px 45px;
+    }
+    @media (max-width: 375px) {
+        width: 250px;
+        margin: 0 20px 18px 20px;   
+        
+    }
 }
 .input::placeholder{
     padding-left: 20px;
@@ -48,6 +64,13 @@ font-size: 14px;
 color: #000;
 text-align: left;
 margin-bottom: 15px;
+margin-left: 80px;
+@media (max-width: 834px) {
+    margin-left: 45px;
+}
+@media (max-width: 393px) {
+    margin-left: 20px;
+}
 }
 .text{
 font-family: var(--font-family);

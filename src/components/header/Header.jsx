@@ -26,8 +26,8 @@ const Header = ({ openModal, user, onSignOut }) => {
                 <div className={`${styles.wrapper} ${menuOpen ? styles.open : ""}`}>
                     <ul className={styles.list}>
                         <li className={styles.item}>Who we are</li>
-                        <li className={styles.item}>Contacts</li>
-                        <li className={styles.item}>Menu</li>
+                        <li className={styles.item}><a href="#contacts">Contacts</a></li>
+                        <li className={styles.item}><a href="#menu">Menu</a></li>
                     </ul>
 
                     <div className={styles.user}>
