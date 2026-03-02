@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/KaterinaZhuvak/weather-dashboard/static/css/main.b5c4fcf4.css",
+    "main.js": "/KaterinaZhuvak/weather-dashboard/static/js/main.94f566c0.js",
+    "static/media/hero-background.png": "/KaterinaZhuvak/weather-dashboard/static/media/hero-background.ad48e16ef158951b8d41.png",
+    "static/media/whatsapp.svg": "/KaterinaZhuvak/weather-dashboard/static/media/whatsapp.65dd5480fea7f6f399c2ae110845582c.svg",
+    "static/media/instagram.svg": "/KaterinaZhuvak/weather-dashboard/static/media/instagram.32e2cc81b7464e0125a07c2562d3eabf.svg",
+    "static/media/heart.svg": "/KaterinaZhuvak/weather-dashboard/static/media/heart.eed36ed96521eb5f3762fdd3f315fe5c.svg",
+    "static/media/facebook.svg": "/KaterinaZhuvak/weather-dashboard/static/media/facebook.4cc87fe3158bdfa7086cdc410dc67e75.svg",
+    "static/media/search.svg": "/KaterinaZhuvak/weather-dashboard/static/media/search.d6b2210006084e689485933e55ccbb7f.svg",
+    "static/media/refresh.svg": "/KaterinaZhuvak/weather-dashboard/static/media/refresh.84dae03ee125d7861419a31ad29262e8.svg",
+    "static/media/bin.svg": "/KaterinaZhuvak/weather-dashboard/static/media/bin.a577fde44b7cbc6ed3aae82e526a4ae8.svg",
+    "index.html": "/KaterinaZhuvak/weather-dashboard/index.html",
+    "static/media/arrow.svg": "/KaterinaZhuvak/weather-dashboard/static/media/arrow.e3ae4c043b1317b8805f6f7e03e5a527.svg",
+    "main.b5c4fcf4.css.map": "/KaterinaZhuvak/weather-dashboard/static/css/main.b5c4fcf4.css.map",
+    "main.94f566c0.js.map": "/KaterinaZhuvak/weather-dashboard/static/js/main.94f566c0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5c4fcf4.css",
+    "static/js/main.94f566c0.js"
+  ]
+}
