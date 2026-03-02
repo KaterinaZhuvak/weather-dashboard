@@ -6,7 +6,7 @@ import pressure from '../../images/weather/pressure.png'
 import wind from '../../images/weather/wind.png'
 import eye from '../../images/weather/eye.png'
 import Button from "../button/Button";
-const API_KEY = "428cd4749b442fe8cc7d21d894cabf94"; 
+const api_key = process.env.REACT_APP_HOURLY_API_KEY;
 const WeatherDetailsModal = ({ onClose, cityName }) => {
     const [weather, setWeather] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -19,7 +19,7 @@ const WeatherDetailsModal = ({ onClose, cityName }) => {
             try {
             
                 const response = await fetch(
-                    `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`
+                    `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${api_key}&units=metric`
                 );
 
                 if (!response.ok) throw new Error("City not found");

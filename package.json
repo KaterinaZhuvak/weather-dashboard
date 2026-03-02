@@ -2,7 +2,7 @@
   "name": "weather-dashboard",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://katerinazuvak.github.io/weather-dashboard/",
+  "homepage": "https://github.com/KaterinaZhuvak/weather-dashboard",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
     "@fortawesome/free-brands-svg-icons": "^7.1.0",

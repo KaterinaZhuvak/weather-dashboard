@@ -83,7 +83,7 @@
 import { useEffect, useState } from "react";
 import styles from "./WeeklyModal.module.css";
 
-const API_KEY = "428cd4749b442fe8cc7d21d894cabf94";
+const api_key = process.env.REACT_APP_WEEKLY_API_KEY
 
 const WeeklyModal = ({ cityName, onClose }) => {
   const [forecast, setForecast] = useState([]);
@@ -92,7 +92,7 @@ const WeeklyModal = ({ cityName, onClose }) => {
     const fetchWeekly = async () => {
       try {
         const res = await fetch(
-          `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=${API_KEY}`
+          `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=${api_key}`
         );
 
         if (!res.ok) throw new Error("Forecast error");

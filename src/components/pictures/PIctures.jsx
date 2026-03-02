@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Pictures.module.css";
-const PIXABAY_KEY = "47549989-617b04660ae302c9307f38156";
+const api_key = process.env.REACT_APP_PIXABY_API_KEY
 
 const Pictures =()=> {
 const [photos, setPhotos] = useState([]);
@@ -8,7 +8,7 @@ const [index, setIndex] = useState(0);
 
 useEffect(() => {
     fetch(
-    `https://pixabay.com/api/?key=${PIXABAY_KEY}&q=nature&image_type=photo&per_page=20`
+    `https://pixabay.com/api/?key=${api_key}&q=nature&image_type=photo&per_page=20`
     )
     .then(res => res.json())
     .then(data => setPhotos(data.hits || []));
