@@ -1,0 +1,70 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    width: 320px;
+    height: 430px;
+    background: #e8e8e8;
+}
+.city_name{
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 24px;
+    color: #000;
+    margin-top: 10px;
+}
+ .news_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+} 
+/* .news_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+} */
+.news_title{
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 25px;
+color: #000;
+text-align: left;
+margin-bottom: 40px;
+margin-top: 80px;
+margin-left:150px;
+@media (max-width: 939px) {
+    font-size: 18px;
+    margin-left: 55px;
+}
+}
+.news_img{
+    border-radius: 10px;
+    width: 270px;
+    height: 208px;
+}
+.news_img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    object-fit: cover;
+}
+.news_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0 150px
+}
+.news_content{
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 16px;
+color: #000;
+width: 270px;
+text-align: left;
+}
+ .news_button{
+   margin-left:150px;
+}

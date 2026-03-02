@@ -1,0 +1,79 @@
+    .container{
+    background-image: url(../images/hero-background.png) , url(../images/hero-overlay.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
+    /* padding: 0 20px; */
+    padding: 100px 0 100px 0;
+    margin: 0;
+}
+.title{
+    font-family: var(--font-family);
+font-weight: 600;
+font-size: 40px;
+color: #fff;
+@media (max-width: 939px) {
+font-size: 20px;
+}
+}
+.text, .date{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+    margin: 0px;
+    @media (max-width: 939px) {
+        font-size: 14px;
+    }
+}
+.line{
+    border: 2px solid #fff;
+    width: 144px;
+    height: 0px;
+    transform: rotate(-90deg);
+    margin: 53px 0px;
+    @media (max-width: 939px) {
+        width: 100px;
+    }
+}
+.cover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 397px) {
+    margin: 0 20px;
+
+    }
+
+}
+.input{
+border-radius: 10px 0 0 10px;
+width: 625px;
+height: 42px;
+background: #d9d9d9;
+padding-left: 29px;
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 14px;
+color: #878787;
+@media (max-width: 375px) {
+    width: 200px;
+    font-size: 12px;
+}
+}
+.input_btn{
+border-left: 2px solid #000;
+border-radius: 0 10px 10px 0;
+width: 45px;
+background: #ffb36c;
+padding: 9px 10px;
+}
+.input_wrapper{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 60px;
+
+}
